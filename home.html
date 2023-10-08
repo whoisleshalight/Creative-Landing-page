@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20231008170616">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFP6wpqfhCjDPduNmhOt4XzxVM_N4Pm8M&_v=20231008170616"></script>
+
+	<script type="text/javascript">
+		// When the window has finished loading create our google map below
+		google.maps.event.addDomListener(window, 'load', init);
+
+		function init() {
+			var location = new google.maps.LatLng(50.07182509727078, 19.936279656019764); // Координаты места
+			// Basic options for a simple Google Map
+			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+			var mapOptions = {
+				// How zoomed in you want the map to start at (always required)
+				zoom: 13,
+				mapTypeControl: false,
+				streetViewControl: false,
+				// zoomControl:false,
+				// The latitude and longitude to center the map (always required)
+				center: location, // New York
+
+				// How you would like to style the map. 
+				// This is where you would paste any style found on Snazzy Maps.
+				styles: [{
+					"featureType": "landscape",
+					"elementType": "all",
+					"stylers": [{
+						"hue": "#ffbb00"
+					}, {
+						"saturation": "5"
+					}, {
+						"lightness": 37.599999999999994
+					}, {
+						"gamma": 1
+					}]
+				}, {
+					"featureType": "poi",
+					"elementType": "all",
+					"stylers": [{
+						"hue": "#00ff6a"
+					}, {
+						"saturation": "-50"
+					}, {
+						"lightness": 11.200000000000017
+					}, {
+						"gamma": 1
+					}]
+				}, {
+					"featureType": "poi",
+					"elementType": "labels",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				}, {
+					"featureType": "road.highway",
+					"elementType": "all",
+					"stylers": [{
+						"hue": "#ffc200"
+					}, {
+						"saturation": "-70"
+					}, {
+						"lightness": 45.599999999999994
+					}, {
+						"gamma": 1
+					}]
+				}, {
+					"featureType": "road.arterial",
+					"elementType": "all",
+					"stylers": [{
+						"hue": "#FF0300"
+					}, {
+						"saturation": -100
+					}, {
+						"lightness": 51.19999999999999
+					}, {
+						"gamma": 1
+					}]
+				}, {
+					"featureType": "road.local",
+					"elementType": "all",
+					"stylers": [{
+						"hue": "#FF0300"
+					}, {
+						"saturation": -100
+					}, {
+						"lightness": 52
+					}, {
+						"gamma": 1
+					}]
+				}, {
+					"featureType": "water",
+					"elementType": "all",
+					"stylers": [{
+						"hue": "#0078ff"
+					}, {
+						"saturation": "-59"
+					}, {
+						"lightness": 2.4000000000000057
+					}, {
+						"gamma": 1
+					}]
+				}]
+			};
+
+			// Get the HTML DOM element that will contain your map 
+			// We are using a div with id="map" seen below in the <body>
+			var mapElement = document.getElementById('map');
+
+			// Create the Google Map using our element and options defined above
+			var map = new google.maps.Map(mapElement, mapOptions);
+
+			// Let's also add a marker while we're at it
+			var marker = new google.maps.Marker({
+				position: location, // Установите маркер на координаты места
+				map: map,
+				title: 'Nails and Co - Salon Manicure i Pedicure' // Название места
+			});
+		}
+	</script>
+	<!-- <script src='https://widgets.sociablekit.com/google-reviews/widget.js?_v=20231008170616' async defer></script> -->
+	<script src='https://widgets.sociablekit.com/google-reviews/widget.js?_v=20231008170616' async defer></script>
+</head>
+
+<body>
+	<div class="loader">
+		<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
+		<div class="loader__box">
+			<div class="loader__box">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper" data-scroll-container id="tager">
+
+
+		<header class="header">
+
+			<div class="header__container">
+				<div class="header__logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo"></picture></div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a data-scroll data-scroll-to href="#about" class="menu__link _hover-link">O nas</a></li>
+							<li class="menu__item"><a data-scroll data-scroll-to href="#services" class="menu__link _hover-link">Usługi</a></li>
+							<li class="menu__item"><a data-scroll data-scroll-to href="#prices" class="menu__link _hover-link">Ceny</a></li>
+							<li class="menu__item"><a data-scroll data-scroll-to href="#shares" class="menu__link _hover-link">Akcje</a></li>
+							<li class="menu__item"><a data-scroll data-scroll-to href="#masters" class="menu__link _hover-link">Nasi rzemieślnicy</a></li>
+							<li class="menu__item"><a data-scroll data-scroll-to href="#recenzje" class="menu__link _hover-link">Recenzje</a></li>
+							<li class="menu__item"><a data-scroll data-scroll-to href="#kontakt" class="menu__link _hover-link">Kontakt</a></li>
+						</ul>
+					</nav>
+
+				</div>
+				<div class="header__actions">
+					<a href="tel:793546146" class="header__phone _icon-phone-solid">+48 793 546 146</a>
+					<a class="header__go _hover-link" target="_blank" href="https://booksy.com/pl-pl/77501_nails-and-co_paznokcie_8820_krakow">Umów Się Na Wizytę</a>
+				</div>
+				<div class="header__bnt">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+
+				</div>
+
+			</div>
+		</header>
+		<main class="page home">
+
+			<section class="home__main main">
+				<div class="main__top top-main">
+					<div class="top-main__container">
+						<div class="top-main__title">
+							<h1>Studio manicure <br> i pedicure</h1>
+							<div class="top-main__pictures">
+								<picture><source srcset="img/main_h.webp" type="image/webp"><img src="img/main_h.png" alt="image"></picture>
+							</div>
+						</div>
+						<div class="top-main__info">
+							<p>Delikatne podejście, atmosfera wolności, jedność jakości i doświadczenia.</p>
+							<p>Możesz nam powierzyć nie tylko swój wygląd, ale i nastrój.</p>
+						</div>
+					</div>
+				</div>
+				<div class="main__bottom bottom-main">
+					<a data-scroll data-scroll-to href="#about" data-scroll data-scroll-direction="vertical" data-scroll-speed="3" class="bottom-main__link">
+						<div class="bottom-main__link-box">
+
+							<img src="img/btn.svg" alt="icon">
+							<span class="_icon-star"></span>
+						</div>
+					</a>
+					<div class="bottom-main__image">
+
+						<picture><source srcset="img/main2.webp" type="image/webp"><img data-scroll data-scroll-direction="vertical" data-scroll-speed="-6" class="bottom-main__bg" src="img/main2.jpg" alt="background"></picture>
+
+					</div>
+					<div class="bottom-main__info">
+						<div class="bottom-main__box" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-6">
+							<span class="_icon-star">Wszystkie niezbędne usługi</span>
+							<span class="_icon-star">Wysoka jakość</span>
+							<span class="_icon-star">Ciepła obsługa</span>
+							<span class="_icon-star">Komfort</span>
+							<span class="_icon-star">Piękny design</span>
+							<span class="_icon-star">Wszystkie niezbędne usługi</span>
+							<span class="_icon-star">Wysoka jakość</span>
+							<span class="_icon-star">Ciepła obsługa</span>
+							<span class="_icon-star">Komfort</span>
+							<span class="_icon-star">Piękny design</span>
+							<span class="_icon-star">Wszystkie niezbędne usługi</span>
+							<span class="_icon-star">Wysoka jakość</span>
+							<span class="_icon-star">Ciepła obsługa</span>
+							<span class="_icon-star">Komfort</span>
+							<span class="_icon-star">Piękny design</span>
+							<span class="_icon-star">Wszystkie niezbędne usługi</span>
+							<span class="_icon-star">Wysoka jakość</span>
+							<span class="_icon-star">Ciepła obsługa</span>
+							<span class="_icon-star">Komfort</span>
+							<span class="_icon-star">Piękny design</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section data-scroll id="about" class="home_about about">
+				<div class="about__container">
+					<div class="about__top top-about">
+						<div class="top-about__item item-top-about">
+							<img src="img/i-01.svg" alt="icon">
+							<h2 class="item-top-about__title">Jakość</h2>
+							<h3 class="item-top-about__info">Tylko sprawdzone materiały, sterylne narzędzia.</h3>
+						</div>
+						<div class="top-about__item item-top-about">
+							<img src="img/i-02.svg" alt="icon">
+							<h2 class="item-top-about__title">Doświadczenie</h2>
+							<h3 class="item-top-about__info">Nasze studio jest obsługiwane wyłącznie przez profesjonalistów
+							</h3>
+						</div>
+						<div class="top-about__item item-top-about">
+							<img src="img/i-03.svg" alt="icon">
+							<h2 class="item-top-about__title">Prędkość</h2>
+							<h3 class="item-top-about__info">Cenimy Twój czas. Procedura trwa średnio 1 godzinę.</h3>
+						</div>
+					</div>
+					<div class="about__body">
+						<div class="about__content">
+							<h5 class="about__title">Piękno w dobrym stylu "NAILS AND GO"</h5>
+							<p class="about__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. At quasi
+								reprehenderit, consectetur magni et sunt. Veniam doloribus, voluptatum consequatur blanditiis
+								soluta mollitia iure voluptatem necessiLorem ipsum dolor sit amet consectetur adipisicing elit.
+								At quasi
+								reprehenderit, consectetur magni et sunt. Veniam doloribus, voluptatum consequatur blanditiis
+								soluta mollitia iure voluptatem necesstatibus. Facere inventore quod qui accusamus!</p>
+							<h6 class="about__subtitle">Robimy wszystko, abyś czuł się u nas swobodnie i przytulnie - jak w
+								domu.</h6>
+						</div>
+						<div class="about__pictures pictures-about">
+							<div class="pictures-about__top top-pictures-about">
+								<picture><source srcset="img/about-01.webp" type="image/webp"><img src="img/about-01.jpg" alt=""></picture>
+							</div>
+							<div class="pictures-about__bottom bottom-pictures-about">
+								<picture><source srcset="img/about-02.webp" type="image/webp"><img class="bottom-pictures-about__left" src="img/about-02.jpg" alt=""></picture>
+								<picture><source srcset="img/about-03.webp" type="image/webp"><img class="bottom-pictures-about__right" src="img/about-03.jpg" alt=""></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section data-scroll id="services" class="home__services services">
+				<div class="services__container">
+					<h1 class="services__uptitle _uptitle">Usługi</h1>
+					<h2 class="services__title _title">Co oferujemy</h2>
+					<div class="services__body">
+						<div class="services__item item-services">
+							<div class="item-services__image -ibg">
+								<picture><source srcset="img/services/01.webp" type="image/webp"><img src="img/services/01.jpg" alt="image"></picture>
+							</div>
+							<div class="item-services__info">
+								<p class="item-services__uptitle">Lorem ipsum dolor sit amet.</p>
+								<h3 class="item-services__title">Мanicure</h3>
+							</div>
+						</div>
+						<div class="services__item item-services">
+							<div class="item-services__image -ibg">
+								<picture><source srcset="img/services/02.webp" type="image/webp"><img src="img/services/02.jpg" alt="image"></picture>
+							</div>
+							<div class="item-services__info">
+								<p class="item-services__uptitle">Lorem ipsum dolor sit amet.</p>
+								<h3 class="item-services__title">Makijaz</h3>
+							</div>
+						</div>
+						<div class="services__item item-services">
+							<div class="item-services__image -ibg">
+								<picture><source srcset="img/services/04.webp" type="image/webp"><img src="img/services/04.jpg" alt="image"></picture>
+							</div>
+							<div class="item-services__info">
+								<p class="item-services__uptitle">Lorem ipsum dolor sit amet.</p>
+								<h3 class="item-services__title">Pedicure</h3>
+							</div>
+						</div>
+						<div class="services__item item-services">
+							<div class="item-services__image -ibg">
+								<picture><source srcset="img/services/05.webp" type="image/webp"><img src="img/services/05.jpg" alt="image"></picture>
+							</div>
+							<div class="item-services__info">
+								<p class="item-services__uptitle">Lorem ipsum dolor sit amet.</p>
+								<h3 class="item-services__title">Fryzury</h3>
+							</div>
+						</div>
+					</div>
+					<div class="services__promo promo-services">
+						<div class="promo-services__body">
+							<video loop poster="img/promo.jpg" src="img/promo.mp4"></video>
+							<div class="promo-services__controls controls">
+								<div class="controls__content content-controls">
+									<button type="button" class="button content-controls__btn-rotate-play">
+										<img src="img/promo_btn.svg" alt="icon">
+										<span class="_icon-star"></span>
+									</button>
+									<span class="content-controls__line"></span>
+									<p class="content-controls__text">Film promocyjny Obejrzyj</p>
+								</div>
+								<button type="button" class="controls__play">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M8.125 1C12.0594 1 15.25 4.18986 15.25 8.125C15.25 12.0601 12.0594 15.25 8.125 15.25C4.18986 15.25 1 12.0601 1 8.125C1 4.18986 4.18986 1 8.125 1Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.375 8.12136C10.375 7.51301 7.2569 5.56684 6.90318 5.91677C6.54947 6.26671 6.51546 9.94304 6.90318 10.3259C7.29091 10.7102 10.375 8.72971 10.375 8.12136Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</button>
+								<button type="button" class="controls__stop _icon-stop"></button>
+							</div>
+						</div>
+
+					</div>
+					<a class="services__link _hover-action" target="_blank" href="https://booksy.com/pl-pl/77501_nails-and-co_paznokcie_8820_krakow">Umów się na wizytę</a>
+				</div>
+			</section>
+
+			<section data-scroll id="prices" class="home__prices prices">
+				<div class="prices__container">
+					<p class="prices__uptitle _uptitle">Сennik</p>
+					<h2 class="prices__title _title">Ceny usług</h2>
+					<div class="prices__body">
+						<div class="prices__left">
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">Manicure</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure frezarkowy / kombinowany(bez malowania)</div>
+										<div class="subitem-prices__info">90 zl</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure + Ussuniecie hybrydy bez zalozenia nowej</div>
+										<div class="subitem-prices__info">120 zl</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure + Ussuniecie zeli</div>
+										<div class="subitem-prices__info">130 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure + malowania zwyklym lakierem</div>
+										<div class="subitem-prices__info">130 zl
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">Manicure hybrydowy</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure hybrydowy (jednolity kolor)</div>
+										<div class="subitem-prices__info">150 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure hybrydowy + zdobenia</div>
+										<div class="subitem-prices__info">150 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure hybrydowy + wzochienie baza kauczukowa / pudrem akrylowym</div>
+										<div class="subitem-prices__info">160 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure hybrydowy + wzochienie baza kauczukowa / pudrem akrylowym + zdobenia</div>
+										<div class="subitem-prices__info">160 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure hybrydowy + malowanie french/babybomer</div>
+										<div class="subitem-prices__info">190 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure hybrydowy + wzochienie + malowanie french/babybomer</div>
+										<div class="subitem-prices__info">200 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Manicure hybrydowy + spa dloni</div>
+										<div class="subitem-prices__info">180 zl</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">Przedluzanie paznokci</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Przedluzanie paznokci + Manicure hybrydowe (dlugocc S/M)</div>
+										<div class="subitem-prices__info">220 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Przedluzanie paznokci + Manicure hybrydowe (dlugocc L/XL)</div>
+										<div class="subitem-prices__info">250 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Przedluzanie paznokci S/M + hybryda + french/babybomer</div>
+										<div class="subitem-prices__info">250 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Przedluzanie paznokci L/XL + hybryda + french/babybomer</div>
+										<div class="subitem-prices__info">280 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Przedluzanie paznokci + hybryda + zdobenia</div>
+										<div class="subitem-prices__info">220 zl +
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">Uzupelnienie zelu</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Uzupelnienie zelu S/M + malowania hybrydowe</div>
+										<div class="subitem-prices__info">180 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Uzupelnienie zelu L/XL + malowania hybrydowe</div>
+										<div class="subitem-prices__info">210 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">zel na naturalna plyzke + malowania hybrydowe</div>
+										<div class="subitem-prices__info">170 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">zel na naturalna plyzke + malowania hybrydowe + french/babybomer</div>
+										<div class="subitem-prices__info">200 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">zel na naturalna plyzke + malowania hybrydowe + zdobienia</div>
+										<div class="subitem-prices__info">170 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">sciagniecie zelu przy zabiecy/bez zabiecy</div>
+										<div class="subitem-prices__info">40 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">naprawa jedneco paznokcia zelem przy zabiecy/bez zabiecy</div>
+										<div class="subitem-prices__info">25 zl</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">Pedicure</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Pedicure frezarkowy (same paznokcie)</div>
+										<div class="subitem-prices__info">120 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Pedicure frezarkowy (same paznokcie) Ussuniecie hybrydy</div>
+										<div class="subitem-prices__info">140 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Pedicure frezarkowy (same paznokcie) + malowanie zwyklym lakierem</div>
+										<div class="subitem-prices__info">150 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">Pedicure frezarkowy</div>
+										<div class="subitem-prices__info">150 zl
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prices__right">
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">Pedicure hybrydowy</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">pedicure frezarkowy + malowania hybrydowe(jednolity kolor) </div>
+										<div class="subitem-prices__info">180 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">pedicure frezarkowy + malowania hybrydowe(french/babybomer)</div>
+										<div class="subitem-prices__info">180 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">pedicure frezarkowy + malowania hybrydowe + zdobenia</div>
+										<div class="subitem-prices__info">180 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">pedicure frezarkowy + malowania hybrydowe + spa dla stop</div>
+										<div class="subitem-prices__info">240 zl
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">brwi</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">regulacja brwi</div>
+										<div class="subitem-prices__info">70 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">koloryzacja brwi farba</div>
+										<div class="subitem-prices__info">70 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">koloryzacja brwi henna</div>
+										<div class="subitem-prices__info">80 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">architektura brwi(dopasowanie indywidualnego ksztaltu + regulacja + koloryzacja)</div>
+										<div class="subitem-prices__info">120 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">dlugotrwala stylizacja brwi(ulozenie + zmiana kierunkow niesfornie rosnacych wloskow)</div>
+										<div class="subitem-prices__info">120 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">architektura brwi + dlugotrwala stylizacja brwi</div>
+										<div class="subitem-prices__info">160 zl
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">makijaz</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">makijaz okazjonalny (express, dzienny, wiegzorowy, slubny probny, slubny)</div>
+										<div class="subitem-prices__info">300 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">doczepianie kepek(bez makijazy)</div>
+										<div class="subitem-prices__info">50 zl
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">kurs "twoj makijaz" (4 godziny)</div>
+										<div class="subitem-prices__info">600 zl
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices__item item-prices">
+								<div class="item-prices__title">Fryzury</div>
+								<div class="item-prices__body">
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">loki (1 dlugosc/2 dlugosc/3 dlugosc)</div>
+										<div class="subitem-prices__info">200 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">loki afro (1 dlugosc/2 dlugosc/3 dlugosc)</div>
+										<div class="subitem-prices__info">200 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">upiecie okolicznosciowe (1 dlugosc/2 dlugosc/3 dlugosc)</div>
+										<div class="subitem-prices__info">250 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">probna fruzura slubna / fryzura slubna (1 dlugosc/2 dlugosc/3 dlugosc)</div>
+										<div class="subitem-prices__info">300 zl +
+										</div>
+									</div>
+									<div class="item-prices__subitem subitem-prices">
+										<div class="subitem-prices__title">warkogz fashion (1 dlugosc/2 dlugosc/3 dlugosc)</div>
+										<div class="subitem-prices__info">150 zl +</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="prices__link _hover-action" target="_blank" href="https://booksy.com/pl-pl/77501_nails-and-co_paznokcie_8820_krakow">Umów się na
+						wizytę</a>
+				</div>
+			</section>
+
+			<section data-scroll id="shares" class="home__shares shares">
+				<div class="shares__container">
+					<p class="shares__uptitle _uptitle">Promocje i rabaty</p>
+					<h2 class="shares__title _title">Zawsze oferujemy korzystne oferty dla naszych gości</h2>
+					<div class="shares__body">
+						<div class="shares__item item-shares">
+							<div class="item-shares__picture"><picture><source srcset="img/sales/01.webp" type="image/webp"><img src="img/sales/01.jpg" alt="picture"></picture></div>
+							<p class="item-shares__info">20% zniżki na pierwszą wizytę</p>
+						</div>
+						<div class="shares__item item-shares">
+							<div class="item-shares__picture"><picture><source srcset="img/sales/02.webp" type="image/webp"><img src="img/sales/02.jpg" alt="picture"></picture></div>
+							<p class="item-shares__info">Przyprowadź znajomego i uzyskaj 25% zniżki na dowolną usługę</p>
+						</div>
+						<div class="shares__item item-shares">
+							<div class="item-shares__picture"><picture><source srcset="img/sales/03.webp" type="image/webp"><img src="img/sales/03.jpg" alt="picture"></picture></div>
+							<p class="item-shares__info">Co ósmy manicure jest bezpłatny</p>
+						</div>
+					</div>
+
+					<a class="shares__link _hover-action" target="_blank" href="https://booksy.com/pl-pl/77501_nails-and-co_paznokcie_8820_krakow">Umów się na
+						wizytę</a>
+				</div>
+			</section>
+
+			<section data-scroll id="masters" class="home__masters masters">
+				<div class="masters__container">
+					<h1 class="masters__uptitle _uptitle">Nasi rzemieślnicy</h1>
+					<h2 class="masters__title _title">Mistrzowie, którzy tworzą piękno</h2>
+					<div class="masters__body">
+						<div class="masters__item item-masters">
+							<div class="item-masters__picture"><picture><source srcset="img/masters/01.webp" type="image/webp"><img src="img/masters/01.jpg" alt="master photo"></picture></div>
+							<div class="item-masters__body">
+								<div class="item-masters__wrapper">
+									<h3 class="item-masters__name">Sofia</h3>
+									<h4 class="item-masters__rank">Top master</h4>
+									<p class="item-masters__info">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+										Suscipit culpa perspiciatis aliquid iure consectetur id, repudiandae natus, tempore velit
+										accusamus debitis. Odio minus hic vitae voluptates saepe. Quae, architecto. Quas.</p>
+								</div>
+								<a href="#" target="_blank" class="item-masters__link">Instagram</a>
+							</div>
+						</div>
+						<div class="masters__item item-masters">
+							<div class="item-masters__picture"><picture><source srcset="img/masters/02.webp" type="image/webp"><img src="img/masters/02.jpg" alt="master photo"></picture></div>
+							<div class="item-masters__body">
+								<div class="item-masters__wrapper">
+									<h3 class="item-masters__name">Lera</h3>
+									<h4 class="item-masters__rank">Top master</h4>
+									<p class="item-masters__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+										ab ratione ex tenetur dolor neque, repudiandae dignissimos sequi rerum fugiat, aliquam nam
+										quasi esse vel minima recusandae ipsa libero suscipit?</p>
+								</div>
+								<a href="#" target="_blank" class="item-masters__link">Instagram</a>
+							</div>
+						</div>
+						<div class="masters__item item-masters">
+							<div class="item-masters__picture"><picture><source srcset="img/masters/03.webp" type="image/webp"><img src="img/masters/03.jpg" alt="master photo"></picture></div>
+							<div class="item-masters__body">
+								<div class="item-masters__wrapper">
+									<h3 class="item-masters__name">Masha</h3>
+									<h4 class="item-masters__rank">Top master</h4>
+									<p class="item-masters__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+										fugiat quia autem, quasi mollitia modi vero quas velit asperiores dolorem placeat nemo
+										dolore sint dicta dolorum. Molestias illo beatae quam?</p>
+								</div>
+								<a href="#" target="_blank" class="item-masters__link">Instagram</a>
+							</div>
+						</div>
+						<div class="masters__item item-masters">
+							<div class="item-masters__picture"><picture><source srcset="img/masters/04.webp" type="image/webp"><img src="img/masters/04.jpg" alt="master photo"></picture></div>
+							<div class="item-masters__body">
+								<div class="item-masters__wrapper">
+									<h3 class="item-masters__name">Nastya</h3>
+									<h4 class="item-masters__rank">Top master</h4>
+									<p class="item-masters__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+										ut expedita illum nulla esse harum! Error sint, necessitatibus voluptatibus quis commodi
+										optio illo cumque veniam odit consectetur, libero, quidem beatae.</p>
+								</div>
+								<a href="#" target="_blank" class="item-masters__link">Instagram</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section data-scroll id="recenzje" class="home__reviews reviews">
+				<div class="reviews__container">
+					<div class="reviews__top">
+						<div class="reviews__uptitle _uptitle">Opinie</div>
+						<h2 class="reviews__title _title">Opinie ulubionych klientów</h2>
+					</div>
+					<div>
+						<div class='sk-ww-google-reviews' data-embed-id='202523'></div>
+					</div>
+					<div class="reviews__record">
+						<a class="_hover-action" target="_blank" href="https://booksy.com/pl-pl/77501_nails-and-co_paznokcie_8820_krakow">Umów się na wizytę</a>
+					</div>
+
+			</section>
+
+			<section class="home__advantages advantages">
+				<picture><source srcset="img/advantages.webp" type="image/webp"><img data-scroll data-scroll-direction="vertical" data-scroll-speed="-6" class="advantages__bg" src="img/advantages.jpg" alt="background"></picture>
+				<div data-scroll data-scroll-direction="horizontal" data-scroll-speed="6" class="advantages__body">
+					<span class="_icon-star">Jakość</span><span class="_icon-star">Komfort</span><span class="_icon-star">Profesjonalizm</span><span class="_icon-star">Jakość</span><span class="_icon-star">Komfort</span><span class="_icon-star">Profesjonalizm</span></в>
+			</section>
+
+			<section data-scroll id="kontakt" class="home__contacts contacts">
+				<div class="contacts__container">
+					<h2 class="contacts__title _title">KONTAKT Z NAMI</h2>
+				</div>
+				<div class="contacts__wrapper">
+					<div id="map" class="contacts__map"></div>
+					<div class="contacts__body">
+						<h3 class="contact__subtitle">Łączność</h3>
+						<div class="contacts__items">
+							<div class="contacts__item item-contacts">
+								<h4 class="item-contacts__title ">Adres:</h4>
+								<a class="_icon-location-dot-solid" target="_blank" href="https://www.google.com/maps/place/Nails+and+Co+-+Salon+Manicure+i+Pedicure/@50.0717377,19.9363251,17z/data=!4m15!1m8!3m7!1s0x47165b06bae55555:0x1b0ed765c5a21019!2zRMWCdWdhIDU5LzEsIDMxLTE0NyBLcmFrw7N3LCDQn9C-0LvRjNGJ0LA!3b1!8m2!3d50.0717377!4d19.9363251!16s%2Fg%2F11n0dmgbkb!3m5!1s0x47165bf3ded4ee7f:0x34a6fad41efc7709!8m2!3d50.0717377!4d19.9363251!16s%2Fg%2F11jpc44xln?entry=ttu">Długa
+									59/1, 31-147 Kraków</a>
+								<a class="_icon-diamond-go" target="_blank" href="https://www.google.com/maps/dir//Nails+and+Co+-+Salon+Manicure+i+Pedicure/data=!4m8!4m7!1m0!1m5!1m1!1s0x47165bf3ded4ee7f:0x34a6fad41efc7709!2m2!1d19.936325099999998!2d50.0717377">Wyznacz
+									Trasę</a>
+
+							</div>
+							<div class="contacts__item item-contacts">
+								<h4 class="item-contacts__title">Telefon:</h4>
+								<a class="_icon-phone-solid" href="tel:793546146">+48 793 546 146</a>
+							</div>
+
+							<div class="contacts__item item-contacts social">
+								<a target="_blank" href="https://www.instagram.com/nails_and_co_krakow/" class="_icon-instagram"></a>
+								<a target="_blank" href="https://www.facebook.com/people/NAILS-and-CO/100063518590799/" class="_icon-facebook-f"></a>
+								<a target="_blank" href="https://www.youtube.com/@nailsandco5254" class="_icon-youtube"></a>
+							</div>
+							<div class="contacts__item item-contacts">
+								<h4 class="item-contacts__title">Od poniedziałku do piątku, od 10:00 do 20:00.</h4>
+
+							</div>
+							<div class="contacts__item item-contacts">
+								<a class="item-contacts__record _hover-action" target="_blank" href="https://booksy.com/pl-pl/77501_nails-and-co_paznokcie_8820_krakow">Umów się na
+									wizytę</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<ul class="footer__list">
+					<li class="footer__item"><a data-scroll data-scroll-to href="#about" class="footer__link _hover-link">O nas</a></li>
+					<li class="footer__item"><a data-scroll data-scroll-to href="#services" class="footer__link _hover-link">Usługi</a></li>
+					<li class="footer__item"><a data-scroll data-scroll-to href="#prices" class="footer__link _hover-link">Ceny</a></li>
+					<li class="footer__item"><a data-scroll data-scroll-to href="#shares" class="footer__link _hover-link">Akcje</a></li>
+					<li class="footer__item"><a data-scroll data-scroll-to href="#masters" class="footer__link _hover-link">Nasi rzemieślnicy</a></li>
+					<li class="footer__item"><a data-scroll data-scroll-to href="#recenzje" class="footer__link _hover-link">Recenzje</a></li>
+					<li class="footer__item"><a data-scroll data-scroll-to href="#kontakt" class="footer__link _hover-link">Kontakt</a></li>
+
+				</ul>
+				<div class="footer__logo"><picture><source srcset="img/footer-logo.webp" type="image/webp"><img src="img/footer-logo.png" alt="logo"></picture><a target="_blank" href="https://tolight.studio/">Made with <span class="_icon-love">by tolight.studio</span></a></div>
+				<p class="footer__copyright">© 2023 Nails and Co - All rights reserved.</p>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20231008170616"></script>
+</body>
+
+</html>
